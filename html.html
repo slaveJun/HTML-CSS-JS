@@ -68,13 +68,38 @@ input[type=submit]{
 </head>
 
 
+<script>
+  function myFirstFunc(){
 
+    var userId = "lululala";
+    var password = "1234";
+
+
+    var x = document.getElementById("username").value;
+    var y = document.getElementById("password").value
+
+    console.log(x);
+    console.log(y);
+
+    if (userId == x && password == y){
+      alert("ok")
+    } else if(userId != x && password != y){
+      alert("다시 한 번 확인해주세요")
+    }else if(userId != x && password == y){
+      alert("아이디를 확인해주세요")
+    }else if(userId == x && password != y){
+      alert("비밀번호를 확인해주세요")
+    }
+    
+    
+  }
+</script>
 <body>
   <header>
     <h2>Login</h2>
 </header>
 
-<form action="" method="POST">
+
 
     <div class="input-box">
         <input id="username" type="text" name="username" placeholder="아이디">
@@ -86,9 +111,9 @@ input[type=submit]{
         <label for="password">비밀번호</label>
     </div>
     <div id="forgot">비밀번호 찾기</div>
-    <input type="submit" value="로그인">
+    <input type="submit" value="로그인" onClick="myFirstFunc()">
 
-</form>
+
 
 </body> 
 
